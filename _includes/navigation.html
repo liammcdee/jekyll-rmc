@@ -15,107 +15,49 @@
 <div class="menu-container clearfix vertical-align-cell">
   <nav>
       <ul class="sf-menu">
-          <li class="selected">
-              <a href="/" title="Home">
-                  Home
+            {% for item in site.data.navigation.navlinks %}
+          <li {% if page.url == item.url %}class="selected"{% endif %}>
+              <a href="{{item.url}}" title="item.title">
+                  {{item.title}}
               </a>
+              {% if item.subfolderitems[0] %}
+              <ul>              
+              {% for entry in item.subfolderitems %}
+              <li>
+                  <a href="{{entry.url}}" title="{{entry.page}}">
+                        {{entry.page}}
+                    </a>
+                </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </li>
-          <li>
-              <a href="services.html" title="Services">
-                  Services
-              </a>
-              <ul>
-                  <li>
-                      <a href="service_engine_diagnostics.html" title="Engine Diagnostics">
-                          Engine Diagnostics
-                      </a>
-                  </li>
-                  <li>
-                      <a href="service_lube_oil_filters.html" title="Lube, Oil and Filters">
-                          Lube, Oil and Filters
-                      </a>
-                  </li>
-                  <li>
-                      <a href="service_belts_hoses.html" title="Belts and Hoses">
-                          Belts and Hoses
-                      </a>
-                  </li>
-                  <li>
-                      <a href="service_air_conditioning.html" title="Air Conditioning">
-                          Air Conditioning
-                      </a>
-                  </li>
-                  <li>
-                      <a href="service_brake_repair.html" title="Brake Repair">
-                          Brake Repair
-                      </a>
-                  </li>
-                  <li>
-                      <a href="service_tire_wheel.html" title="Tire and Wheel Services">
-                          Tire and Wheel Services
-                      </a>
-                  </li>
-              </ul>
-          </li>
-          <li class="left-flyout">
-              <a href="@Url.Action("", "")" title="Contact">
-                  Contact
-              </a>
-          </li>
+          {% endfor %}          
       </ul>
   </nav>
   <div class="mobile-menu-container">
       <div class="mobile-menu-divider"></div>
       <nav>
           <ul class="mobile-menu collapsible-mobile-submenus">
-              <li class="selected">
-                  <a href="/" title="Home">
-                      Home
-                  </a>
+            {% for item in site.data.navigation.navlinks %}
+              <li {% if page.url == item.url %}class="selected"{% endif %}>
+                  <a href="{{item.url}}" title="{{item.title}}">
+                      {{item.title}}
+                  </a>                  
+                  {% if item.subfolderitems[0] %}
+                    <a href="#" class="template-arrow-menu"></a>
+                    <ul>
+                    {% for entry in item.subfolderitems %}
+                    <li>
+                        <a href="{{entry.url}}" title="{{entry.page}}">
+                            {{entry.page}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
               </li>
-              <li>
-                  <a href="services.html" title="Services">
-                      Services
-                  </a>
-                  <a href="#" class="template-arrow-menu"></a>
-                  <ul>
-                      <li>
-                          <a href="service_engine_diagnostics.html" title="Engine Diagnostics">
-                              Engine Diagnostics
-                          </a>
-                      </li>
-                      <li>
-                          <a href="service_lube_oil_filters.html" title="Lube, Oil and Filters">
-                              Lube, Oil and Filters
-                          </a>
-                      </li>
-                      <li>
-                          <a href="service_belts_hoses.html" title="Belts and Hoses">
-                              Belts and Hoses
-                          </a>
-                      </li>
-                      <li>
-                          <a href="service_air_conditioning.html" title="Air Conditioning">
-                              Air Conditioning
-                          </a>
-                      </li>
-                      <li>
-                          <a href="service_brake_repair.html" title="Brake Repair">
-                              Brake Repair
-                          </a>
-                      </li>
-                      <li>
-                          <a href="service_tire_wheel.html" title="Tire and Wheel Services">
-                              Tyre and Wheel Services
-                          </a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="left-flyout">
-                  <a href="contact.html" title="Contact">
-                      Contact
-                  </a>
-              </li>
+              {% endfor %}              
           </ul>
       </nav>
   </div>

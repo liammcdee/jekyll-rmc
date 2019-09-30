@@ -1,4 +1,12 @@
-- name: Home
-  link: /
-- name: About
-  link: /about/
+navlinks:
+  - title: Home
+    url: /    
+  - title: Services
+    url: /Services/ 
+    subfolderitems:
+      - page: Brakes
+        url: /Services/Brakes/
+      - page: Tyres
+        url: /Services/Tyres/      
+  - title: Contact
+    url: /Contact/  
