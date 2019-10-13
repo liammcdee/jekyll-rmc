@@ -1,4 +1,13 @@
-/* --- general --- */
+@import "reset.css";
+@import "superfish.css";
+@import "prettyPhoto.css";
+@import "jquery.qtip.css";
+@import "animations.css";
+@import "responsive.css";
+@import "odometer-theme-default.css";
+@import "fonts/social/styles.css";
+@import "fonts/streamline-small/style.css";
+@import "fonts/template/styles.css";
 .clearfix:after
 {
     font-size: 0px;
@@ -60,8 +69,9 @@ p.description
 	letter-spacing: 0px;
 }
 p a,
-table a {
-    color: #F68220;
+table a
+{
+	color: #1E69B8;
 }
 .footer-row p a
 {
@@ -397,13 +407,14 @@ h2.box-header.align-left
 {
 	text-align: left;
 }
-.box-header:after {
-    display: block;
-    content: "";
-    background: #F68220;
-    width: 40px;
-    height: 2px;
-    margin-top: 13px;
+.box-header:after
+{
+	display: block;
+	content: "";
+	background: #1E69B8;
+	width: 40px;
+	height: 2px;
+	margin-top: 13px;
 }
 h2.box-header:after
 {
@@ -473,16 +484,18 @@ h3 .more
 	width: 370px;
 	/*float: left;*/
 }
-    .header h1 {
-        font-size: 34px;
-        font-weight: 800;
-        color: #F68220;
-        line-height: 1;
-        letter-spacing: 0;
-    }
-        .header h1 a {
-            color: #F68220;
-        }
+.header h1
+{
+	font-size: 34px;
+	font-weight: 800;
+	color: #1E69B8;
+	line-height: 1;
+	letter-spacing: 0;
+}
+.header h1 a
+{	
+	color: #1E69B8;
+}
 .header h1 a:hover
 {
 	opacity: 1;
@@ -538,9 +551,10 @@ h3 .more
 {
 	color: #777;
 }
-    .bread-crumb li:last-child {
-        color: #F68220;
-    }
+.bread-crumb li:last-child
+{
+	color: #1E69B8;
+}
 /* --- menu --- */
 .menu-container
 {
@@ -583,9 +597,10 @@ h3 .more
 {
 	background: none #fff;
 }
-    .sf-menu li:hover a, .sf-menu li:hover a:visited {
-        color: #F68220;
-    }
+.sf-menu li:hover a, .sf-menu li:hover a:visited
+{
+	color: #1E69B8;
+}
 .sf-menu li a, .sf-menu li a:visited
 {
 	font-family: 'Open Sans';
@@ -1061,7 +1076,7 @@ body.overlay .background-overlay
 	position: relative;
 	float: left;
 	width: 390px;
-	
+	background: #FFF;
 	padding-bottom: 30px;
 	overflow: hidden;
 }
