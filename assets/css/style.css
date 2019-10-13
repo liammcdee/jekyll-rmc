@@ -3,11 +3,6 @@
 @import "prettyPhoto.css";
 @import "jquery.qtip.css";
 @import "animations.css";
-@import "responsive.css";
-@import "odometer-theme-default.css";
-@import "fonts/social/styles.css";
-@import "fonts/streamline-small/style.css";
-@import "fonts/template/styles.css";
 .clearfix:after
 {
     font-size: 0px;
