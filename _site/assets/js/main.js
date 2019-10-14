@@ -13,7 +13,7 @@ var marker = null;
 var menu_position = null;
 function gm_authFailure() 
 {
-	if($("#map").length)
+	if(!$("#map").length)
 		alert('Please define Google Maps API Key.\nReplace YOUR_API_KEY with the key generated on https://developers.google.com/maps/documentation/javascript/get-api-key\nin below line before the </body> closing tag <script type="text/javascript" src="//maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>');
 }
 jQuery(document).ready(function($){
@@ -905,7 +905,7 @@ jQuery(document).ready(function($){
 		
 		map = new google.maps.Map(document.getElementById("map"),mapOptions);
 		marker = new google.maps.Marker({
-			position: new google.maps.LatLng(54.6030321,-7.3124989),
+			position: new google.maps.LatLng(54.6029794,-7.309694),
 			map: map,
 			icon: new google.maps.MarkerImage("/assets/images/map_pointer.png", new google.maps.Size(38, 48), null, new google.maps.Point(18, 48))
 		});
