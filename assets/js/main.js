@@ -905,9 +905,9 @@ jQuery(document).ready(function($){
 		
 		map = new google.maps.Map(document.getElementById("map"),mapOptions);
 		marker = new google.maps.Marker({
-			position: new google.maps.LatLng(54.6030321,-7.3124989),
+			position: new google.maps.LatLng(54.603181,-7.310369),
 			map: map,
-			icon: new google.maps.MarkerImage("/assets/images/car_marker.png", new google.maps.Size(38, 48), null, new google.maps.Point(18, 48))
+			icon: new google.maps.MarkerImage("/assets/images/map_pointer.png", new google.maps.Size(38, 48), null, new google.maps.Point(18, 48))
 		});
 	}
 	
