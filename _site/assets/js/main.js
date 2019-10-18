@@ -1064,7 +1064,7 @@ jQuery(document).ready(function($){
 		});
 		$(".submit-contact-form").on("click", function(event){
 			event.preventDefault();
-			$("#contact-form").submit();
+			$("#contact-form").submit();			
 		});
 	}
 	$(".contact-form").submit(function(event){
@@ -1088,28 +1088,29 @@ jQuery(document).ready(function($){
 			dataType: "json",
 			success: function(json){
 				self.find(".submit-contact-form, [name='submit'], [name='name'], [name='email'], [name='message']").qtip('destroy');
-				if(typeof(json.isOk)!="undefined" && json.isOk)
+				if(typeof(json.ok)!="undefined" && json.ok)
 				{
-					if(typeof(json.submit_message)!="undefined" && json.submit_message!="")
-					{
+					
 						self.find(".submit-contact-form").qtip(
 						{
 							style: {
 								classes: 'ui-tooltip-success'
 							},
 							content: { 
-								text: json.submit_message 
+								text: "Message Sent" 
 							},
 							position: { 
 								my: "right center",
 								at: "left center" 
 							}
 						}).qtip('show');
+						$("#contact-form").hide();
+						$("#contact-form-success").show();
 						self[0].reset();
 						self.find(".cost-slider-input").trigger("change");
 						self.find(".cost-dropdown").selectmenu("refresh");
 						self.find("input[type='text'], textarea").trigger("focus").trigger("blur");
-					}
+					
 				}
 				else
 				{

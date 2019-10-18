@@ -38,9 +38,10 @@ permalink: /contact/
             
         </div>
         <div class="row page-margin-top">
-            <form class="contact-form" method="POST" action="https://formspree.io/xpvkdnpx">
+            <form class="contact-form" method="POST" action="https://formspree.io/xpvkdnpx" id="contact-form">
                 <div class="row">
                     <fieldset class="column column-1-2">
+                            <input type="hidden" name="_replyto" value="ryan@rmccarrepairs.co.uk">
                         <label for="name" style="display:none;"></label>
                         <input class="text-input" name="name" type="text" value="Your Name *" placeholder="Your Name *">
                         <label for="email" style="display:none;"></label>
@@ -61,10 +62,13 @@ permalink: /contact/
                         <input type="hidden" name="action" value="contact_form" />
                         <div class="row margin-top-20 padding-bottom-20">
                             <a class="more submit-contact-form" href="#" title="SEND MESSAGE"><span>SEND MESSAGE</span></a>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </form>
+            <div class="row margin-top-20 padding-bottom-20" id="contact-form-success" style="display:none;">
+                    <span>Message submitted. We will respond to your query as soon as possible. If your query is urgent, call us on <a href="tel:02882240208">02882 240208</a></span>
+               </div>
         </div>
     </div>
 </div>
