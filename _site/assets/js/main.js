@@ -905,7 +905,7 @@ jQuery(document).ready(function($){
 		
 		map = new google.maps.Map(document.getElementById("map"),mapOptions);
 		marker = new google.maps.Marker({
-			position: new google.maps.LatLng(54.6030321,-7.3124989),
+			position: new google.maps.LatLng(54.603181,-7.310369),
 			map: map,
 			icon: new google.maps.MarkerImage("/assets/images/map_pointer.png", new google.maps.Size(38, 48), null, new google.maps.Point(18, 48))
 		});
@@ -1064,6 +1064,15 @@ jQuery(document).ready(function($){
 		});
 		$(".submit-contact-form").on("click", function(event){
 			event.preventDefault();
+			$("form").each(function(){
+				// Should return all input elements in that specific form
+				$(this).find(':input').each(function(e){
+					if(this.required && this.value.length == 0){
+						console.log(this + "invalid");
+					}
+				})
+			})
+			//				
 			$("#contact-form").submit();			
 		});
 	}
