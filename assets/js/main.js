@@ -1064,13 +1064,15 @@ jQuery(document).ready(function($){
 		});
 		$(".submit-contact-form").on("click", function(event){
 			event.preventDefault();
+			//set reply to email address
+			$('input[name="_replyto"]').val($('input[name="email"]').val());
 			$("form").each(function(){
 				// Should return all input elements in that specific form
 				$(this).find(':input').each(function(e){
 					if(this.required && this.value.length == 0){
 						console.log(this + "invalid");
-					}
-				})
+					}					
+				})				
 			})
 			//				
 			$("#contact-form").submit();			
